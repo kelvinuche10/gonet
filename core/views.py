@@ -1,0 +1,18 @@
+from .models import Room, Messages
+from django.shortcuts import render, redirect
+from django.views import View
+
+
+class HomeView(View):
+
+    def get(self, request):
+        render(request, 'home.html')
+
+
+class RoomView(View):
+
+    def get(self, request):
+        return render(request, 'room.html')
+
+    def post(self, request):
+        return render(request, 'room.html')
